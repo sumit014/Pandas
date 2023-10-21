@@ -50,3 +50,26 @@ Pandas provide a wide range of functions and methods for efficiently loading dat
    import pandas as pd
    df = pd.read_parquet('data.parquet')
    ```
+
+## Important Parameters for read_csv:
+
+1. **filepath**: specifies the path to the csv file. We can provide the file path as a string, a URL, or a file like object.
+2. **names**: to override the column names we need to use this parameter with the list of new column names.
+3. **sep**: defines the characterused to separate fields in CSV files. Default value is ',' nut e can specify other character.
+4. **index_col**: this parameter specifies which column should be used as the data frame index. We can pass either the column name or index of it.
+5. **skiprows**: this parameter allows you to skip a specific number of rows at the begining of the CSV file. It can be useful when there are metadata or comments at the top of the CSV file.
+
+## Displaying DataFrames
+
+We can see the top 5 and bottom 5 rows of a dataframe by just typing the name of the data frame and executing the cell.
+
+- head(n): This method displays the first n rows of the data. Default is 5 rows.
+  ```df.head(n)```
+- tail(n): This method shows the last n rows of the data frame.
+  ```df.tail(n)```
+- sample(n): if want to see random rows from the DataFrame, use this method.
+  ```
+  df.sample(n)
+  Here, 10 represents the number of random rows to represent.
+  ```
+  
